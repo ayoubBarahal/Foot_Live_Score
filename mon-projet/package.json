@@ -17,7 +17,8 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "vercel --prod"
+    "deploy": "vercel --prod",
+    "vercel-build": "npm install && npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
