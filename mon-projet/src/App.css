@@ -1,0 +1,194 @@
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Tilt Neon', sans-serif;
+  background: linear-gradient(135deg, #1e2a3a, #0d1b2a);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.app {
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.app-header {
+  margin-bottom: 40px;
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.app-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.competitions-container {
+  display: flex;
+  flex-direction: column; /* Mise en colonne pour prendre toute la largeur */
+  gap: 30px;
+  margin-top: 40px;
+  width: 100%; /* S'assure que le container prend toute la largeur */
+}
+
+.competition-card {
+  background-color: #1c2331;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  transform: scale(1);
+  width: 100%; /* Chaque carte prend toute la largeur disponible */
+}
+
+.competition-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.competition-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.competition-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+}
+
+.competition-header h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.competition-header span {
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+.competition-details {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.competition-details p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+.competition-flag {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+.competition-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.competition-flag:hover img {
+  transform: scale(1.1);
+}
+
+/* Animation pour les textes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.competition-card {
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .app-header p {
+    font-size: 1rem;
+  }
+
+  .competitions-container {
+    width: 100%; /* Assure que le container occupe toute la largeur */
+    gap: 20px; /* Réduit l'espacement pour les petits écrans */
+  }
+
+  .competition-card {
+    width: 100%; /* Chaque carte prend toute la largeur disponible */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .app-header p {
+    font-size: 0.9rem;
+  }
+
+  .competition-card {
+    width: 100%; /* Carte pleine largeur */
+  }
+
+  .competition-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .competition-header span {
+    font-size: 1rem;
+  }
+
+  .competition-details p {
+    font-size: 0.9rem;
+  }
+}

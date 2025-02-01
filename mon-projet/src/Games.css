@@ -1,0 +1,193 @@
+.games {
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e2a3a, #0d1b2a);
+  }
+  
+  .games-header {
+    margin-bottom: 40px;
+    color: #fff;
+  }
+  
+  .games-header h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #fff;
+  }
+  
+  .games-header p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-top: 10px;
+  }
+  
+  .matches-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .match-card {
+    background-color: #1c2331;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    animation: fadeInUp 0.5s ease-in-out;
+  }
+  
+  .match-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .tournament-name {
+    color: #aaa;
+    font-size: 1.1rem;
+  }
+  
+  .match-status {
+    color: #4CAF50;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    background-color: rgba(76, 175, 80, 0.1);
+    border-radius: 10px;
+  }
+  
+  .teams-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+  }
+  
+  .team-name {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  .team-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+  }
+  
+  .score-container {
+    padding: 0 20px;
+  }
+  
+  .score {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .games-header h1 {
+      font-size: 2.2rem;
+    }
+  
+    .games-header p {
+      font-size: 1rem;
+    }
+  
+    .team-name {
+      font-size: 1rem;
+    }
+  
+    .score {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .games-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .games-header p {
+      font-size: 0.9rem;
+    }
+  
+    .teams-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .team {
+      justify-content: center;
+    }
+  
+    .score-container {
+      padding: 10px 0;
+    }
+  }
+  .date-selector {
+    display: flex;
+    align-items: center; /* Aligner le contenu sur une seule ligne */
+    margin: 20px 0;
+  }
+  
+  .date-selector label {
+    font-size: 1.1rem;
+    margin-right: 15px; /* Un petit espace entre le label et l'input */
+    color: #ccc;
+  }
+  
+  .date-selector input[type="date"] {
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 250px; /* Taille ajustée pour un input plus élégant */
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .date-selector input[type="date"]:hover {
+    border-color: #007bff; /* Changement de couleur au survol */
+  }
+  
+  .date-selector input[type="date"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3); /* Effet de focus avec ombre bleue */
+  }
+  
