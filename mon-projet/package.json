@@ -13,8 +13,8 @@
   },
   "scripts": {
     "install": "npm install",
-    "start": "react-scripts start",
     "build": "react-scripts build",
+    "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "vercel --prod"
