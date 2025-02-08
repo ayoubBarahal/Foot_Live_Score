@@ -13,6 +13,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/games" element={<Games />} />
+        <Route path="*" element={<h1>Page Not Found</h1>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
